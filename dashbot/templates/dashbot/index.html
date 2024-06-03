@@ -3,8 +3,36 @@
 {% block main %}
 <h1>Support metrics</h1>
 
+<h2>Totals</h2>
+
 <ul>
   <li>Issues open: {{ issues_open.count }}</li>
+  <li>Triaged, awaiting response: {{ issues_open.count }}</li>
+  <li>Closed, no response: 0</li>
+  <li>Issues closed: 0</li>
+  <li>Access issue: 1/0</li>
+  <li>Account recovery: 1/0</li>
+  <li>Size limit, projects: 1/0</li>
+  <li>Size limit, release files: 1/0</li>
+  <li>Namesquatting: 1/0</li>
+  <li>Organization accounts: 1/0</li>
+  <li>Namespace (PEP 541): 1/0</li>
+</ul>
+
+<h2>This month</h2>
+
+<ul>
+  <li>Triaged, awaiting response: {{ issues_open.count }}</li>
+  <li>Closed, no response: 0</li>
+  <li>Issues open: {{ issues_open.count }}</li>
+  <li>Issues closed: 0</li>
+  <li>Access issue: 1/0</li>
+  <li>Account recovery: 1/0</li>
+  <li>Size limit, projects: 1/0</li>
+  <li>Size limit, release files: 1/0</li>
+  <li>Namesquatting: 1/0</li>
+  <li>Organization accounts: 1/0</li>
+  <li>Namespace (PEP 541): 1/0</li>
 </ul>
 
 {% endblock %}
