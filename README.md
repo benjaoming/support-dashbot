@@ -45,8 +45,8 @@ python manage.py runserver
 
 ```
 GITHUB_REPO = "benjaoming/support-dashbot"
-GITHUB_APP_CLIENT_ID = "..."
-GITHUB_APP_SECRET = "..."
+GITHUB_APP_ID = "123456"
+GITHUB_APP_PRIVATE_KEY = """{insert .pem file from GitHub}"""
 ```
 
 ## Usage
