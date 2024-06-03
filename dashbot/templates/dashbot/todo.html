@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Support TODO</h1>
+
+<h2>Latest issues...</h2>
+
+<ul>
+{% for issue in issues_open %}
+  <li><a href="{{ issue.get_url }}">#{{ issue.number }}: {{ issue.title }}</a></li>
+
+{% empty %}
+  <li><em>None found 🏝️</em></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

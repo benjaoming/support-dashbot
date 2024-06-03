@@ -8,7 +8,7 @@ The purpose is to:
 * Actionable daily overview for support worker (dashboard)
 * Key metrics for support activities (dashboard)
 
-## Prerequisits
+## Prerequisites
 
 * A GitHub repo + GitHub App configured with access to write issue comments and fetch info via API
 
@@ -25,15 +25,28 @@ pip install -r requirements.txt
 # See settings template below
 nano project/settings/local.py
 
+# Bootstrap database
+python manage.py migrate
+
+# Add a user
+python manage.py createsuperuser
+
+# Collect issue information from repo
+python manage.py update_issues
+
+# Triage issues. Default: Dry-run
+python manage.py triage_issues --oldest --count=10
+
+# Run project's web interface and webhook locally
 python manage.py runserver
 ```
 
 ### Settings template
 
 ```
-GITHUB_REPO = "https://github.com/benjaoming/support-dashbot"
-GITHUB_APP_TOKEN = "..."
-GITHUB_APP_KEY = "..."
+GITHUB_REPO = "benjaoming/support-dashbot"
+GITHUB_APP_CLIENT_ID = "..."
+GITHUB_APP_SECRET = "..."
 ```
 
 ## Usage
