@@ -2,6 +2,16 @@ from django.db import models
 from django.utils.text import slugify
 
 
+class Channel(models.Model):
+    channel_type = models.CharField(
+        max_length=64,
+        choices=[
+            ("github", "GitHub"),
+            ("help_scout", "HelpScout"),
+        ]
+    )
+
+
 class Repository(models.Model):
     url = models.CharField(unique=True, max_length=1024)
     name = models.CharField(max_length=1024)
