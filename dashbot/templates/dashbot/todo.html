@@ -3,7 +3,9 @@
 {% block main %}
 <h1>Support TODO</h1>
 
-<h2>Latest issues...</h2>
+<h2>Important</h2>
+
+<h3>Latest issues...</h3>
 
 <ul>
 {% for issue in issues_open %}
@@ -14,16 +16,26 @@
 {% endfor %}
 </ul>
 
-<h2>Triaged, awaiting response</h2>
+<h3>Triaged, response deadline exceeded - close?</h3>
 
 <ul>
   <li><em>None found 🏝️</em></li>
 </ul>
 
-<h2>Triaged, response deadline exceeded - close?</h2>
+<h3>Overdue 🚨</h3>
+
+<ul>
+  <li>Account access: ...</li>
+  <li>Malware reports: ...</li>
+</ul>
+
+<h2>Less important</h2>
+
+<h4>Triaged, awaiting response</h4>
 
 <ul>
   <li><em>None found 🏝️</em></li>
 </ul>
+
 
 {% endblock %}

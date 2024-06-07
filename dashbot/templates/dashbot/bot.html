@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Bot work 🤖️</h1>
+
+<h2>Log from GitHub bot</h2>
+
+<ul>
+  <li>Last issue update: {% now "c" %}</li>
+  <li>Last triage: {% now "c" %}</li>
+</ul>
+
+{% endblock %}

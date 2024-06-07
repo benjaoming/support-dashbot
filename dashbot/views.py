@@ -41,3 +41,11 @@ def forecast(request):
             "issues_open": models.Issue.objects.filter(repository=repository, github_state="open")
         }
     )
+
+
+def bot(request):
+    return render(
+        request,
+        template_name="dashbot/bot.html",
+        context={}
+    )
