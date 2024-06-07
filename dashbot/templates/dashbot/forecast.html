@@ -3,9 +3,11 @@
 {% block main %}
 <h1>Support Forecast 🌦️</h1>
 
+<p>A forecast is based on a number of adjustable parameters that affect the below rates, in order to forecast some projected change to the backlog.</p>
+
 <table>
   <tr>
-    <th>Rate to date</th>
+    <th>Rates (all-time)</th>
     <td>
       <ul>
         <li>14.3 issues resolved per day[1][2]</li>
@@ -21,7 +23,7 @@
       <ul>
         <li>501 open issues</li>
         <li>801 open issues one month ago</li>
-        <li>-37% change</li>
+        <li>-37% change since last month</li>
       </ul>
     </td>
   </tr>
@@ -33,14 +35,14 @@
   [3] New issues are opened since <time datetime="2024-06-001T00:00:00">June 1st, 2024</time>.
 </p>
 
-<h2>Create a forecast 📉</h2>
+<h2>Create a forecast 🧮</h2>
 Based on
 <select class="input-inline">
   <option>all available data</option>
   <option>past 3 month data</option>
 </select>
 <strong>and</strong>
-assuming the speed
+assuming the work efficiency
 <select class="input-inline">
   <option value="75">decreases by 25%</option>
   <option value="100" selected>remains the same</option>
@@ -48,7 +50,7 @@ assuming the speed
 </select>, the forecast looks like this:
 
 <ul>
-  <li>By <strong>June 30th</strong> there will be 349 unresolved issues remaining:
+  <li>By <strong>June 30th</strong> there will be 549 unresolved issues remaining:
     <ul>
       <li>237.8 issues will have been resolved.</li>
       <li>85.8 new issues will have been opened.</li>
@@ -56,7 +58,7 @@ assuming the speed
       <li>96 support hours spent</li>
     </ul>
   </li>
-  <li>By <strong>July 30th</strong> there will be 549 unresolved issues remaining:
+  <li>By <strong>July 30th</strong> there will be 349 unresolved issues remaining:
     <ul>
       <li>203.8 issues will have been resolved.</li>
       <li>85.8 new issues will have been opened.</li>
@@ -64,7 +66,7 @@ assuming the speed
       <li>96 support hours spent</li>
     </ul>
   </li>
-  <li>By <strong>August 30th</strong> there will be 349 unresolved issues remaining:
+  <li>By <strong>August 30th</strong> there will be 149 unresolved issues remaining:
     <ul>
       <li>137.8 issues will have been resolved.</li>
       <li>85.8 new issues will have been opened.</li>
