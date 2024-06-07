@@ -37,7 +37,10 @@ class IssueStatus(models.Model):
 class Issue(models.Model):
     resolved = models.BooleanField(default=False)
     repository = models.ForeignKey(Repository, on_delete=models.PROTECT, related_name="issues")
-    # url = models.URLField(max_length=1024)
+    url = models.URLField(
+        max_length=1024, null=True, blank=True,
+        help_text="Maybe not needed, can be auto-constructed",
+    )
     number = models.PositiveSmallIntegerField()
     title = models.CharField(max_length=1024)
     github_state = models.CharField(max_length=64)

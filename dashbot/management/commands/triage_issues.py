@@ -11,7 +11,7 @@ class Command(BaseCommand):
         repository, __ = models.Repository.objects.get_or_create(
             name=settings.GITHUB_REPO,
             defaults={
-                "url": f"https://github.com/{settings.GITHUB_REPO}/"
+                "url": f"https://github.com/{settings.GITHUB_REPO}/",
             }
         )
 
