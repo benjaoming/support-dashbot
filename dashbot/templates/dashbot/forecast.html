@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Support Forecast 🌦️</h1>
+
+<table>
+  <tr>
+    <th>Rate to date</th>
+    <td>
+      <ul>
+        <li>14.3 issues resolved per day[1][2]</li>
+        <li>8.5 issues opened per day[2]</li>
+        <li>3.1 day resolution for new issues[3]</li>
+        <li>30% triage-closure rate for old issues</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>Issues backlog</th>
+    <td>
+      <ul>
+        <li>501 open issues</li>
+        <li>801 open issues one month ago</li>
+        <li>-37% change</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<p>
+  [1] These numbers apply a full supporter's working day and adjust for all registered exceptions, including recurring weekends.<br>
+  [2] Numbers include 5.2% spam and 15.4% invalid issues<br>
+  [3] New issues are opened since <time datetime="2024-06-001T00:00:00">June 1st, 2024</time>.
+</p>
+
+<h2>Create a forecast 📉</h2>
+Based on
+<select class="input-inline">
+  <option>all available data</option>
+  <option>past 3 month data</option>
+</select>
+<strong>and</strong>
+assuming the speed
+<select class="input-inline">
+  <option value="75">decreases by 25%</option>
+  <option value="100" selected>remains the same</option>
+  <option value="125">increases by 25%</option>
+</select>, the forecast looks like this:
+
+<ul>
+  <li>By <strong>June 30th</strong> there will be 349 unresolved issues remaining:
+    <ul>
+      <li>237.8 issues will have been resolved.</li>
+      <li>85.8 new issues will have been opened.</li>
+      <li>88 issues closed through triage</li>
+      <li>96 support hours spent</li>
+    </ul>
+  </li>
+  <li>By <strong>July 30th</strong> there will be 549 unresolved issues remaining:
+    <ul>
+      <li>203.8 issues will have been resolved.</li>
+      <li>85.8 new issues will have been opened.</li>
+      <li>58 issues closed through triage</li>
+      <li>96 support hours spent</li>
+    </ul>
+  </li>
+  <li>By <strong>August 30th</strong> there will be 349 unresolved issues remaining:
+    <ul>
+      <li>137.8 issues will have been resolved.</li>
+      <li>85.8 new issues will have been opened.</li>
+      <li>34 issues closed through triage</li>
+      <li>96 support hours spent</li>
+    </ul>
+  </li>
+</ul>
+
+{% endblock %}

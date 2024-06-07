@@ -22,6 +22,7 @@ from dashbot import views
 
 urlpatterns = [
     path("", views.index),
+    path("forecast/", views.forecast),
     path("todo/", views.todo),
     path('admin/', admin.site.urls),
 ]

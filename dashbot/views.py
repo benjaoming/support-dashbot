@@ -28,3 +28,16 @@ def todo(request):
             "issues_open": models.Issue.objects.filter(repository=repository, github_state="open")
         }
     )
+
+
+# TODO: Support multiple repos, redirect to slug of first one
+def forecast(request):
+    repository = models.Repository.objects.all()[0]
+    return render(
+        request,
+        template_name="dashbot/forecast.html",
+        context={
+            "repository": repository,
+            "issues_open": models.Issue.objects.filter(repository=repository, github_state="open")
+        }
+    )
