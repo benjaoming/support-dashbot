@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block main %}
+
 <h1>Support metrics</h1>
+
+<canvas id="support-backlog-timeseries"></canvas>
 
 Filter by channel:
 <form>
@@ -60,4 +63,9 @@ Filter by channel:
   <li>Organization accounts: 1/0</li>
   <li>Namespace (PEP 541): 1/0</li>
 </ul>
+
+
+<script src="/static/js/chart.umd.min.js"></script>
+<script src="/static/js/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="/static/js/chart_example.js"></script>
 {% endblock %}
